@@ -1,0 +1,107 @@
+.list {
+
+}
+
+.list__img-wrap {
+  width: 40px;
+  height: 35px;
+  text-align: center;
+  padding: 2px;
+
+  @include themify($themes) {
+    border: 1px solid themed('colorFieldsBorder');
+  }
+
+  img {
+    max-height: 100%;
+    width: auto;
+  }
+}
+
+.list__btn-toolbar-top {
+  position: absolute;
+  top: 0;
+  @include directify($directions) {
+    #{directed('right')}: 0px;
+  }
+  margin: 0;
+
+  @media screen and (max-width: 992px) {
+    position: relative;
+    margin-top: 10px;
+  }
+}
+
+.list-btn-add {
+  padding: 4px 25px;
+  text-transform: none;
+}
+.list__btn-add {
+  padding: 4px 25px;
+  text-transform: none;
+}
+
+.list__search {
+  margin: 0;
+  position: relative;
+
+  svg {
+    position: absolute;
+    @include directify($directions) {
+      #{directed('right')}: 5px;
+    }
+    top: 9px;
+    fill: $color-additional;
+    height: 14px;
+    width: 14px;
+  }
+
+  input {
+    @include directify($directions) {
+      #{directed('padding-right')}: 20px;
+    }
+  }
+}
+
+.list__table-btn-action {
+    display: flex;
+
+    & > button {
+      margin: 0;
+      padding: 0 5px;
+      border: none;
+      background-color: transparent;
+      @include directify($directions) {
+        #{directed('margin-left')}: auto;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      svg {
+        margin: 0;
+        height: 20px;
+        width: 20px;
+        fill: $color-additional;
+        transition: all 0.3s;
+      }
+
+      &:hover, &:not([disabled]):not(.disabled):active, &:focus {
+        background: transparent;
+
+        svg {
+          fill: $color-accent;
+        }
+      }
+    }
+
+    & > div {
+      min-width: 90px;
+      width: 100%;
+    }
+
+    button {
+      font-size: 13px;
+    }
+  }

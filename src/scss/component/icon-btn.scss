@@ -1,0 +1,87 @@
+.list__icon-btn-group {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  line-height: 14px;
+  padding: 0;
+  position: relative;
+  color: $color-additional;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  svg {
+    height: 20px;
+    width: 20px;
+    //position: absolute;
+    //top: -2px;
+    @include directify($directions) {
+      #{directed('left')}: 0px;
+    }
+    fill: $color-additional;
+    transition: all 0.3s;
+  }
+
+  &.primary {
+    &:hover {
+      color: $color-blue-hover;
+
+      svg {
+        fill: $color-blue-hover;
+      }
+    }
+  }
+
+  &.success {
+    &:hover {
+      color: $color-green-hover;
+
+      svg {
+        fill: $color-green-hover;
+      }
+    }
+  }
+
+  &.danger {
+    &:hover {
+      color: $color-red-hover;
+
+      svg {
+        fill: $color-red-hover;
+      }
+    }
+  }
+
+  &.info {
+    &:hover {
+      color: $color-hover;//Definir cor
+
+      svg {
+        fill: $color-hover;//Definir cor
+      }
+    }
+  }
+
+  &.warning {
+    &:hover {
+      color: $color-yellow-hover;
+
+      svg {
+        fill: $color-yellow-hover;
+      }
+    }
+  }
+  &:hover {
+    color: $color-additional-hover;
+
+    svg {
+      fill: $color-additional-hover;
+    }
+  }
+}
+

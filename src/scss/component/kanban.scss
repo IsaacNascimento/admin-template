@@ -1,0 +1,22 @@
+.react-kanban-column-header {
+  font-weight: normal;
+}
+
+.react-kanban-card {
+  text-align: center;
+}
+
+.react-kanban-card__title {
+  display: block;
+}
+
+.react-kanban-card__description {
+  .badge {
+    font-size: 14px;
+  }
+}
+
+.react-kanban-board *[data-rbd-droppable-id]:not([data-rbd-droppable-id*="board-droppable"]) {
+  max-height: 75vh;
+  overflow-y: auto;
+}
